@@ -1,0 +1,17 @@
+<h2>{{ titulo }}</h2>
+<form action="{% url 'encuesta:calcular' %}" method="post">
+    {% csrf_token %}
+    Numero 1:
+    <input type="text" name="num1" maxlength="10"><br>
+    Numero 2:
+    <input type="text" name="num2" maxlength="10"><br>
+    Educacion:
+    <select name="operacion">
+        <option value="sumar">Sumar</option>
+        <option value="restar" selected="selected">Restar</option>
+        <option value="multiplicar">Multiplicar</option>
+    </select><br>
+    
+    <!-- Boton enviar -->
+    <input type="submit" name="submit" value="Enviar">
+</form>

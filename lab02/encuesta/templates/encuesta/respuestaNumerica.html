@@ -1,0 +1,11 @@
+{% load mathfilters %}
+<h2>{{ titulo }}</h2>
+{% if operacion == 'sumar' %}
+<p>La suma de {{ num1 }} + {{ num2 }} es {{ num1|add:num2 }} </p>
+{% elif operacion == 'restar' %}
+<p>La resta de {{ num1 }} - {{ num2 }} es {{ num1|sub:num2 }} </p>
+{% elif operacion == 'multiplicar' %}
+<p>La Multiplicacion de {{ num1 }} X {{ num2 }} es {% widthratio num1 1 num2%} </p>
+{% endif %}
+
+
